@@ -16,7 +16,9 @@ trans = {
 
 d = D.make(trans, inc_val, {val = 0})
 
--- Ends here.
+-- Ends here. From here calling d:inc() moves the machine along.
+-- At each state you can read d.state
+
 
 -- Assertion tests to make sure output sequence is correct.
 
