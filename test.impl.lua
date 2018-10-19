@@ -2,6 +2,8 @@
 
 D = require 'decide'
 
+-- State machine definition starts here.
+
 function inc_val(state) state.val = state.val + 1 end
 function mul_val(state) state.val = 1 + state.val * 2 end
 
@@ -13,6 +15,11 @@ trans = {
 }
 
 d = D.make(trans, inc_val, {val = 0})
+
+-- Ends here.
+
+-- Assertion tests to make sure output sequence is correct.
+
 local cnt = 0
 for i=1, 100 do
    if cnt % 5 == 0 then cnt = 1 + cnt * 2
